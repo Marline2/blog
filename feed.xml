@@ -8,46 +8,56 @@
     
       
       <item>
-        <title>A Full and Comprehensive Style Test</title>
+        <title>[블로그 이전] 테스트</title>
         
-          <description>&lt;p&gt;This is just an &lt;em&gt;ipsis verbis&lt;/em&gt; copy of the first example running on the &lt;a href=&quot;http://demo.ghost.io&quot;&gt;Ghost Demo&lt;/a&gt;. This shows how you can use html styling to achieve your hopes.&lt;/p&gt;
+          <description>&lt;h2 id=&quot;heading2&quot;&gt;기존 블로그에서 이 곳으로 옮기는 중입니다.. 23.10.08&lt;/h2&gt;
+&lt;h6 id=&quot;heading6&quot;&gt;&lt;a href=&quot;https://medium.com/marlinelee2/&quot;&gt;medium@marlinelee2/&lt;/a&gt;&lt;/h6&gt;
 
 </description>
         
-        <pubDate>Sat, 27 Sep 2014 19:18:00 +0900</pubDate>
+        <pubDate>Sun, 08 Oct 2023 00:10:00 +0900</pubDate>
         <link>
-        http://localhost:4000/a-full-and-comprehensive-style-test</link>
-        <guid isPermaLink="true">http://localhost:4000/a-full-and-comprehensive-style-test</guid>
+        http://localhost:4000/etc-test</link>
+        <guid isPermaLink="true">http://localhost:4000/etc-test</guid>
       </item>
       
     
       
       <item>
-        <title>The Businessman &amp; the fisherman</title>
+        <title>[jekyll/jasper] Git 블로그 만들기</title>
         
-          <description>&lt;p&gt;An American businessman took a vacation to a small coastal Mexican village on doctor’s orders. Unable to sleep after an urgent phone call from the office the first morning, he walked out to the pier to clear his head. A small boat with just one fisherman had docked, and inside the boat were several large yellowfin tuna. The American complimented the Mexican on the quality of his fish.&lt;/p&gt;
-
+          <description>&lt;hr /&gt;
+&lt;h6 id=&quot;heading6&quot;&gt;&lt;a href=&quot;https://github.com/jekyllt/jasper&quot;&gt;jekyllt/jasper&lt;/a&gt;&lt;/h6&gt;
+&lt;hr /&gt;
+&lt;p&gt;아래 절차를 밟고 블로그를 만들어요 ! &lt;/p&gt;
+&lt;p&gt;류비다운받고 폴더 다운받아서 붙이고 bundle install 하기 전에 뭐. 또 햇엇음.. 그리고 remote하고
+  branch만들고 git rm 하거나 없앴다룽 주저리주저리.. 테스트로 올린 글이라 제대로 완성하지 않았습니다. 월요일에 할듯? maybe..
+&lt;/p&gt;
 </description>
         
-        <pubDate>Tue, 12 Aug 2014 19:18:00 +0900</pubDate>
+        <pubDate>Sun, 08 Oct 2023 00:10:00 +0900</pubDate>
         <link>
-        http://localhost:4000/the-businessman-and-fisherman</link>
-        <guid isPermaLink="true">http://localhost:4000/the-businessman-and-fisherman</guid>
+        http://localhost:4000/etc-1</link>
+        <guid isPermaLink="true">http://localhost:4000/etc-1</guid>
       </item>
       
     
       
       <item>
-        <title>I Have a Dream</title>
+        <title>[개념] 유의적 버전</title>
         
-          <description>&lt;p&gt;I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation.&lt;/p&gt;
+          <description>&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;-majorminorpatch&quot;&gt;🎈 Major.Minor.Patch&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;특정 시점의 상태에 대해 식별 가능한 유일한 이름을 지정하는 것&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ex) 15.23.6&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         
-        <pubDate>Wed, 28 Aug 1963 19:18:00 +0900</pubDate>
+        <pubDate>Sat, 07 Oct 2023 23:10:00 +0900</pubDate>
         <link>
-        http://localhost:4000/i-have-a-dream</link>
-        <guid isPermaLink="true">http://localhost:4000/i-have-a-dream</guid>
+        http://localhost:4000/basic-1</link>
+        <guid isPermaLink="true">http://localhost:4000/basic-1</guid>
       </item>
       
     

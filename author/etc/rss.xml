@@ -12,13 +12,38 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
-	  <title>A Full and Comprehensive Style Test</title>
-	  <link>/blog//a-full-and-comprehensive-style-test</link>
+	  <title>[jekyll/jasper] Git 블로그 만들기</title>
+	  <link>/blog//etc-1</link>
 	  <author></author>
-	  <pubDate>2014-09-27T19:18:00+09:00</pubDate>
-	  <guid>/blog//a-full-and-comprehensive-style-test</guid>
+	  <pubDate>2023-10-08T00:10:00+09:00</pubDate>
+	  <guid>/blog//etc-1</guid>
 	  <description><![CDATA[
-	     <p>This is just an <em>ipsis verbis</em> copy of the first example running on the <a href="http://demo.ghost.io">Ghost Demo</a>. This shows how you can use html styling to achieve your hopes.</p>
+	     <hr />
+<h6 id="heading6"><a href="https://github.com/jekyllt/jasper">jekyllt/jasper</a></h6>
+<hr />
+<p>아래 절차를 밟고 블로그를 만들어요 ! </p>
+<p>류비다운받고 폴더 다운받아서 붙이고 bundle install 하기 전에 뭐. 또 햇엇음.. 그리고 remote하고
+  branch만들고 git rm 하거나 없앴다룽 주저리주저리.. 테스트로 올린 글이라 제대로 완성하지 않았습니다. 월요일에 할듯? maybe..
+</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>[블로그 이전] 테스트</title>
+	  <link>/blog//etc-test</link>
+	  <author></author>
+	  <pubDate>2023-10-08T00:10:00+09:00</pubDate>
+	  <guid>/blog//etc-test</guid>
+	  <description><![CDATA[
+	     <h2 id="heading2">기존 블로그에서 이 곳으로 옮기는 중입니다.. 23.10.08</h2>
+<h6 id="heading6"><a href="https://medium.com/marlinelee2/">medium@marlinelee2/</a></h6>
+
+<hr />
+
+<p>안녕!</p>
+
+<p>This is just an <em>ipsis verbis</em> copy of the first example running on the <a href="http://demo.ghost.io">Ghost Demo</a>. This shows how you can use html styling to achieve your hopes.</p>
 
 
 <p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.</p>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>Marline2.github.io/blog/</title>
+   
+   <link>http://localhost:4000</link>
+   <description>복습하쟈</description>
+   <language>utf-8</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>[개념] 유의적 버전</title>
+	  <link>/blog//basic-1</link>
+	  <author></author>
+	  <pubDate>2023-10-07T23:10:00+09:00</pubDate>
+	  <guid>/blog//basic-1</guid>
+	  <description><![CDATA[
+	     <p><br /></p>
+<h2 id="-majorminorpatch">🎈 Major.Minor.Patch</h2>
+<ul>
+  <li><strong>특정 시점의 상태에 대해 식별 가능한 유일한 이름을 지정하는 것</strong> <code class="language-plaintext highlighter-rouge">ex) 15.23.6</code></li>
+</ul>
+
+<ol>
+  <li><strong>Major</strong>
+    <ul>
+      <li>기존 버전과 호환되지 않는 새로운 버전</li>
+      <li>예시의 숫자 15</li>
+    </ul>
+  </li>
+  <li><strong>Minor</strong>
+    <ul>
+      <li>기존 버전과 호환되는 새로운 기능이 추가된 버전</li>
+      <li>예시의 숫자 23</li>
+    </ul>
+  </li>
+  <li><strong>Patch</strong>
+    <ul>
+      <li>기존 버전과 호환되는 버그 및 오타 등이 수정된 버전</li>
+      <li>예시의 숫자 6</li>
+    </ul>
+  </li>
+</ol>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>
