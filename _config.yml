@@ -4,7 +4,7 @@
 markdown: kramdown
 highlighter: rouge
 paginate: 5
-language: 'en-uk'
+language: 'utf-8'
 
 # Website info
 name: '말린이의 복습공간'

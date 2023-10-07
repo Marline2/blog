@@ -6,8 +6,7 @@ logo: 'assets/images/ghost.png'
 current: about
 ---
 
-This is a demo blog for Ghost, it contains dummy content which allows you to click around and see what a Ghost blog running the default theme looks like.
+안녕하세요 ! 말린이라고 합니다 .
+Git Hub 주소는 [이곳](https://github.com/Marline2) 입니다 .
 
-We use this for testing and for reference!
-
-If you'd like to set up your own blog, head on over to [https://ghost.org](https://ghost.org) and sign up.
+많은 사람의 블로그 글이 제게 큰 도움이 되어주었듯 저도 알게 된 내용을 정리하여 공유하고 싶습니다.
