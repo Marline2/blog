@@ -4,9 +4,10 @@
         <span class="hidden">Close</span>
     </a>
     <ul>
-        <li class="nav-home {% if page.current == 'home' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}">Home</a></li>
-        <li class="nav-about {% if page.current == 'about' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}about">About</a></li>
-        <li class="nav-fables {% if page.url contains 'basic' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/basic">Basic</a></li>
+        <div class="heart"></div>
+        <li class="nav-home {% if page.current == 'home' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}">Home</a></li><div class="heart"></div>
+        <li class="nav-about {% if page.current == 'about' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}about">About</a></li><div class="heart"></div>
+        <li class="nav-fables {% if page.url contains 'basic' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/basic">Basic</a></li><div class="heart"></div>
         <li class="nav-author {% if page.url contains 'etc' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/etc">Etc</a></li>
         <!--<li class="nav-author {% if page.url contains 'casper' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}author/casper">Casper</a></li>
         <li class="nav-author {% if page.url contains 'edgar' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}author/edgar">Edgar</a></li>-->
@@ -14,3 +15,12 @@
     <a class="subscribe-button icon-feed" href="{{ site.baseurl }}feed.xml">Subscribe</a>
 </div>
 <span class="nav-cover"></span>
+
+<script>
+    var list = ['🤍', '🧡', '💛', '💚', '💙', '💜', '🤎'];
+    window.onload = changeIcon;
+    function changeIcon(){
+        for(let i=0; i<document.getElementsByTagName('li').length; i++)
+            document.getElementsByClassName('heart')[i].innerHTML = '<div>'+list[i]+'<div>'
+    }
+</script>
