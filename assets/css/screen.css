@@ -709,8 +709,19 @@ body.nav-opened .nav {
     list-style: none;
     counter-reset: item;
 }
+.nav ul .heart {
+    display: block;
+    float: right;
+    padding-right: 4%;
+    padding-left: 5px;
+    text-align: right;
+    font-size: 1.2rem;
+    vertical-align: bottom;
+    color: #B8B8B8;
+} 
 
-.nav li:before {
+/*.nav li::before {
+    width:3px;
     display: block;
     float: right;
     padding-right: 4%;
@@ -721,7 +732,7 @@ body.nav-opened .nav {
     color: #B8B8B8;
     content: counter(item, lower-roman);
     counter-increment: item;
-}
+}*/
 .nav li {
     margin: 0;
 }
@@ -733,11 +744,11 @@ body.nav-opened .nav {
     padding: 0.6rem 4%;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    /*text-overflow: ellipsis;*/
 }
 .nav li a:after {
     display: inline-block;
-    content: " .......................................................";
+    /*content: " .......................................................";*/
     color: rgba(255,255,255,0.2);
     margin-left: 5px;
 }
@@ -760,6 +771,7 @@ body.nav-opened .nav {
 .nav a:hover,
 .nav a:active,
 .nav a:focus {
+    content: "이자식";
     color: #fff;
 }
 
@@ -946,6 +958,7 @@ body.nav-opened .nav {
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {
     margin: 10px 0 10px 0;
+    text-shadow: 3px 3px 3px black;
     font-size: 5rem;
     letter-spacing: -1px;
     font-weight: 700;
@@ -956,6 +969,7 @@ body.nav-opened .nav {
 .page-description {
     margin: 0;
     font-size: 2rem;
+    text-shadow: 2px 2px 2px gray;
     line-height: 1.5em;
     font-weight: 400;
     font-family: "Merriweather", serif;
@@ -1789,8 +1803,9 @@ body.page-template .post-title {
     }
 
     .page-description {
-        font-size: 1.8rem;
+        font-size: 2rem;
         line-height: 1.5em;
+        text-shadow: 3px 3px 3px black;
     }
 
     .post {

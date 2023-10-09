@@ -69,9 +69,10 @@
         <span class="hidden">Close</span>
     </a>
     <ul>
-        <li class="nav-home  nav-current" role="presentation"><a href="/blog/">Home</a></li>
-        <li class="nav-about " role="presentation"><a href="/blog/about">About</a></li>
-        <li class="nav-fables " role="presentation"><a href="/blog/tag/basic">Basic</a></li>
+        <div class="heart"></div>
+        <li class="nav-home  nav-current" role="presentation"><a href="/blog/">Home</a></li><div class="heart"></div>
+        <li class="nav-about " role="presentation"><a href="/blog/about">About</a></li><div class="heart"></div>
+        <li class="nav-fables " role="presentation"><a href="/blog/tag/basic">Basic</a></li><div class="heart"></div>
         <li class="nav-author " role="presentation"><a href="/blog/tag/etc">Etc</a></li>
         <!--<li class="nav-author " role="presentation"><a href="/blog/author/casper">Casper</a></li>
         <li class="nav-author " role="presentation"><a href="/blog/author/edgar">Edgar</a></li>-->
@@ -79,6 +80,15 @@
     <a class="subscribe-button icon-feed" href="/blog/feed.xml">Subscribe</a>
 </div>
 <span class="nav-cover"></span>
+
+<script>
+    var list = ['🤍', '🧡', '💛', '💚', '💙', '💜', '🤎'];
+    window.onload = changeIcon;
+    function changeIcon(){
+        for(let i=0; i<document.getElementsByTagName('li').length; i++)
+            document.getElementsByClassName('heart')[i].innerHTML = '<div>'+list[i]+'<div>'
+    }
+</script>
 
 
     <div class="site-wrapper">
