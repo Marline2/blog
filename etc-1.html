@@ -74,8 +74,7 @@
         <li class="nav-fables " role="presentation"><a href="/blog/tag/basic">Basic</a></li><div class="heart"></div>
         <li class="nav-author  nav-current" role="presentation"><a href="/blog/tag/etc">Etc</a></li><div class="heart"></div>
         <li class="nav-author " role="presentation"><a href="/blog/tag/secret">Secret</a></li>
-        <!--<li class="nav-author " role="presentation"><a href="/blog/author/casper">Casper</a></li>
-        <li class="nav-author " role="presentation"><a href="/blog/author/edgar">Edgar</a></li>-->
+        <!--<li class="nav-author " role="presentation"><a href="/blog/author/edgar">Edgar</a></li>-->
     </ul>
     <a class="subscribe-button icon-feed" href="/blog/feed.xml">Subscribe</a>
 </div>
@@ -84,13 +83,13 @@
 <script type="module">
     var list = ['🤍', '🧡', '💛', '💚', '💙', '💜', '🤎'];
     window.onload = changeIcon; 
-    function changeIcon(){
+    function changeIcon(){ 
         for(let i=0; i<document.getElementsByTagName('li').length; i++){
-            if(i==document.getElementsByTagName('li').length-1) document.getElementsByClassName('heart')[i].innerHTML = '<div>📌<div>'
+            if(i==document.getElementsByTagName('li').length-1) document.getElementsByClassName('heart')[i].innerHTML = '<div>🔐<div>'
             else document.getElementsByClassName('heart')[i].innerHTML = '<div>'+list[i]+'<div>'
 
             if(document.getElementsByTagName('li')[i].className == 'nav-author  nav-current'){
-                if(window.location.href.contain('http://127.0.0.1:4000/blog/')) return true;
+                if(window.location.href.includes('http://127.0.0.1:4000/blog/')) return true;
                  else { 
                     alert('접근할 수 없습니다. ');
                     return window.location.href='/blog/';
@@ -135,13 +134,13 @@
                     <a href='/blog/author/Marline2'>marline lee</a>
                 
             
-            <time class="post-date" datetime="2023-10-08">08 Oct 2023</time>
+            <time class="post-date" datetime="2023-10-10">10 Oct 2023</time>
                 <!-- [[tags prefix=" on "]] -->
                 
                 on
                 
                     
-                       <a href='/blog/tag/secret'>Secret</a>
+                       <a href='/blog/tag/etc'>Etc</a>
                     
                 
                 
@@ -151,37 +150,182 @@
         <section class="post-content">
 
             <hr />
-<h6 id="heading6"><a href="https://github.com/jekyllt/jasper">jekyllt/jasper</a></h6>
-<hr />
-<p>아래 절차를 밟고 블로그를 만들어요 ! </p>
-<p>류비다운받고 폴더 다운받아서 붙이고 bundle install 하기 전에 뭐. 또 햇엇음.. 그리고 remote하고
-  branch만들고 git rm 하거나 없앴다룽 주저리주저리.. 테스트로 올린 글이라 제대로 완성하지 않았습니다. 월요일에 할듯? maybe..
-</p>
+<h6 id="heading6">해당 게시글이 알려줄 블로그 테마는 ✨<a href="https://github.com/jekyllt/jasper">jekyllt/jasper</a> 입니다. </h6>
+<p><img src="https://raw.githubusercontent.com/jekyllt/jasper/master/assets/images/jasper_screen1.png" alt="Test Image" /></p>
+<hr id="list"/>
+<h3 id="orderedlist">🛠순서</h3>
 
+<ol>
+<li><a href="#1" style="text-decoration: none;"><strong>Ruby</strong>를 다운로드 합니다. </a></li>
+<li><a href="#2" style="text-decoration: none;">테마 파일을 다운로드 받아 기본 <strong>구조</strong>를 만듭니다. </a></li>
+<li><a href="#3" style="text-decoration: none;">Git Hub와 <strong>연동</strong>합니다. </a> <br />
+<ol><li><a href="#3-1" style="text-decoration: none;">Branch 1과 연동합니다. </a></li>
+<li><a href="#3-2" style="text-decoration: none;">Branch 2와 연동합니다. </a></li></ol></li>
+<li><a href="#4" style="text-decoration: none;">기본 <strong>설정</strong>을 합니다.</a></li>
+</ol>
+
+<hr  id="1"/>
+<h3>🚗 </h3>
+<h5><a href="#list" style="text-decoration: none;">1. Ruby를 다운로드 합니다. </a></h5>
+<h6 id="heading6"><a href="https://rubyinstaller.org/downloads/">rubyinstaller.org/downloads/</a></h6>
+
+<p><img src="/blog/assets/images/2023-10-09-etc-1/1.PNG" alt="Ruby Homepage" /> <br/>
+<strong>jekyll는 Ruby언어를 통해 개발한 프레임 워크입니다.</strong> <br/>글쓴이는 <var>"Ruby+Devkit 3.1.4-1"</var>를 다운로드 했습니다.
+너무 최신 버전을 다운로드하면 정상적인 동작이 힘들 수 있다고 하니 참고해 주세요 !  <br/><br/>
+<strong>다운로드 후에는 Ruby cmd 창이 자동으로 열리는데</strong>, 이어서 다운로드를 받아줍니다.<mark>(이 과정을 무시하고 닫으면 설치가 되지 않은 채로 남습니다!)</mark><br/><br/>
+그 후에 정상적으로 다운로드가 완료되었는지 터미널에서 확인합니다. 
+<pre>
+  ruby -v
+</pre>
+</p>
+<hr id="2"/>
+<h3>🚗 🚓</h3>
+<h5 ><a href="#list" style="text-decoration: none;">2. 테마 파일을 다운로드 받아 기본 구조를 만듭니다. </a></h5>
+<p>
+  테마가 등록된 Git Hub[<a href="https://github.com/jekyllt/jasper">jekyllt/jasper</a>]를 fork해도 되고, ZIP파일을 다운로드 받아 사용해도 됩니다.
+  이 글의 2~3번은 <mark>ZIP파일을 다운로드</mark> 받았을 경우의 순서입니다. <br/><br/>
+  원하는 위치에 해당 압축 파일을 푼 후, cmd를 실행하여 번들러를 install 합니다. 
+  <pre>
+  cd [압축을 푼 폴더]
+  gem install bundler #테마의 gem 파일 설치
+  bundler install #관련 번들 설치
+  bundle add webrick #webrick 설치</pre>
+  Ruby v3.0부터 gem에 webrick이 포함되지 않아 <code> `require': cannot load such file -- webrick (LoadError)</code> 라는 오류가 서버 기동 시 뜰 수 있습니다.
+  <pre>
+  bundle exec jekyll s</pre>
+  실행하면 <code>http://127.0.0.1:4000/jasper/</code>에서 정상적으로 돌아가는 것을 확인할 수 있습니다.
+</p>
+<hr  id="3"/>
+<h3>🚗 🚓 🚕</h3>
+<h5><a href="#list" style="text-decoration: none;">3. Git Hub와 연동합니다. </a></h5>
+<br id="3-1"/>
+<strong><a href="#list" style="text-decoration: none;">🥃Branch 1과 연동합니다.</a></strong>
+<p><mark>Git Hub에 저장소를 하나 추가합니다.</mark> 그리고 jasper-master과 연동 작업을 합니다.
+  <pre>
+    git init
+    git remote add origin [저장소 URL]
+    git add .
+    git commit -m 'init'
+    git push origin [Branch 1]</pre>
+</p>
+<br id="3-2"/>
+<strong ><a href="#list" style="text-decoration: none;">🍺Branch 2와 연동합니다.</a></strong>  
+<p><mark>Git Hub에 저장소에 새로운 Branch를 추가합니다.</mark> 이름은 무난하게 <strong>'gh-pages'</strong> 로 짓습니다. <var>(수정 시, 별도 작업 필요)</var>
+  <img src="/blog/assets/images/2023-10-09-etc-1/2.PNG" alt="add branch" /> <br/>
+  생성된 gh-pages는 [Branch 1]와 동일한 형태를 띄웁니다. 안을 비우고 서버 기동 시 생성된 <strong>jasper-pages</strong>를 넣어야 합니다.
+  <pre>
+    cd ../jasper-pages/
+    git init
+    git remote add origin [저장소 URL]
+    git remote update</pre>
+  그리고 <strong>jasper-pages</strong> 속 파일들을 전부 지우고 이어서 실행합니다.
+  <pre>
+    git checkout gh-pages #원격 저장소의 파일들을 받았습니다. </pre>
+  한 번 더 <strong>jasper-pages</strong> 속 파일들을 전부 지우고 이어서 실행합니다.
+  <pre>
+    git add .
+    git commit -m 'init'
+    git push origin gh-pages</pre>
+  이제 원격 저장소의 gh-pages는 깨끗합니다. <br/>
+  jasper-pages는 서버를 가동하면 생기는 폴더입니다. <mark>jasper-master가 아닌, jasper-pages를 읽어 화면에 뿌립니다.</mark><br/>
+  그러므로 두 폴더는 한 쌍입니다. 단 한 폴더만 커밋하면 서비스 서버에서 정상적으로 돌아가지 않습니다.
+</p>
+<hr id="4"/>
+<h3>🚗 🚓 🚕 🛺</h3>
+<h5 ><a href="#list" style="text-decoration: none;">4. 기본 설정을 합니다.</a> </h5>
+<p>
+  이제 github.io에 블로그를 보여주려면 작업해야 할 것이 있습니다. <br/>
+  <strong>jasper-master</strong> 폴더의 <mark>_config.yml</mark>과 _data안에 있는 <mark>authors.yml</mark>을 수정해야 합니다.<br/>
+  - <kbd>_config.yml</kbd>
+  <img src="/blog/assets/images/2023-10-09-etc-1/3.PNG" alt="_config.yml_1" /> <br/>
+  Website의 정보를 원하는 방향대로 채워넣습니다. 
+  <table>
+    <tbody>
+    <td>name</td>
+    <td>블로그 이름</td>
+    </tr>
+    <tr class="even">
+    <td>description</td>
+    <td>블로그 설명</td>
+    </tr>
+    <tr>
+    <td>short_url</td>
+    <td>서비스될 url</td>
+    </tr>
+    <tr class="even">
+      <td>baseurl</td>
+      <td>'/' 또는 '/[원하는 url]/'</td>
+      </tr>
+    </tbody>
+    </table>
+  <img src="/blog/assets/images/2023-10-09-etc-1/4.PNG" alt="_config.yml_2" /> <br/>
+  <table>
+    <tbody>
+    <td>username</td>
+    <td>Git Hub 이름</td>
+    </tr>
+    <tr class="even">
+    <td>repo</td>
+    <td>해당 원격 저장소 이름</td>
+    </tr>
+    <tr>
+    <td>branch</td>
+    <td>[Branch 1] 명</td>
+    </tr>
+    <tr class="even">
+      <td>relative_source</td>
+      <td>../[원격 저장소 명]<var>(추측)</var></td>
+    </tr>
+    <tr>
+      <td>destination</td>
+      <td>../jasper-pages</td>
+    </tr>
+    <tr class="even">
+      <td>production_url</td>
+      <td>서비스가 될 Full url</td>
+    </tr>
+    <tr>
+      <td>source_url</td>
+      <td>Git Hub 저장소 Full url</td>
+     </tr>
+    </tbody>
+    </table>
+    - <kbd>authors.yml</kbd>
+    <img src="/blog/assets/images/2023-10-09-etc-1/5.PNG" alt="authors.yml_1" /> <br/>
+    작성자 정보를 기입합니다. <br/>
+    저장 후, <code>bundle exec jekyll s</code> 를 해주고 <strong>두 개의 폴더</strong>를 Git에 commit 합니다. <br/>
+    Github.io url에 들어가서 확인해요 !
+</p>
+<hr />
+<h4>후기💦</h4>
+<p>jasper은 현재 기준 v2가 최신이고, 이 글이 다루는 jasper은 2021년을 마지막으로
+  업데이트가 끝난 v1입니다. jekyll 테마가 여러 개 있는데, 제 눈에 띈 테마가 이거였네요.. <br/><br/> 마음에 드는 다른 테마가 있다면 시도해 보세요 ! jekyll이라면 비슷할 겁니다. 
+</p>
 
         </section>
 
         <footer class="post-footer">
 
             <!-- Everything inside the #author tags pulls data from the author -->
+            <!--a href="/blog/author/Marline2"-->
             <!-- #author-->
             
                 
                     
                         <figure class="author-image">
-                            <a class="img" href="/blog/author/Marline2" style="background-image: url(/blog/assets/images/marlinesquare.jpg)"><span class="hidden">Marline2's Picture</span></a>
+                            <a class="img" href="/blog/about" style="background-image: url(/blog/assets/images/marlinesquare.jpg)"><span class="hidden">Marline2's Picture</span></a>
                         </figure>
                     
 
                     <section class="author">
-                        <h4><a href="/blog/author/Marline2">marline lee</a></h4>
+                        <h4><a href="/blog/about">marline lee</a></h4>
 
                         
                             <p> 웹 개발자</p>
                         
                         <div class="author-meta">
                             <span class="author-location icon-location"> Seoul, Republic of Korea</span>
-                            <span class="author-link icon-link"><a href="http://Marline2.github.io/blog/"> Marline2.github.io/blog</a></span>
+                            <span class="author-link icon-link"><a href="https://github.com/Marline2"> github.com/Marline2</a></span>
                         </div>
                     </section>
 
@@ -217,13 +361,6 @@
 <aside class="read-next">
 
     <!-- [[! next_post ]] -->
-    
-        <a class="read-next-story " style="background-image: url(/blog/assets/images/cover3.jpg)" href="/blog/etc-test">
-            <section class="post">
-                <h2>[블로그 이전] 테스트</h2>
-                <p>기존 블로그에서 이 곳으로 옮기는 중입니다.. 23.10.08 medium@marlinelee2/ 안녕! This is just an ipsis verbis...</p>
-            </section>
-        </a>
     
     <!-- [[! /next_post ]] -->
     <!-- [[! prev_post ]] -->

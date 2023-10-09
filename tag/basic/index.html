@@ -74,8 +74,7 @@
         <li class="nav-fables  nav-current" role="presentation"><a href="/blog/tag/basic">Basic</a></li><div class="heart"></div>
         <li class="nav-author " role="presentation"><a href="/blog/tag/etc">Etc</a></li><div class="heart"></div>
         <li class="nav-author " role="presentation"><a href="/blog/tag/secret">Secret</a></li>
-        <!--<li class="nav-author " role="presentation"><a href="/blog/author/casper">Casper</a></li>
-        <li class="nav-author " role="presentation"><a href="/blog/author/edgar">Edgar</a></li>-->
+        <!--<li class="nav-author " role="presentation"><a href="/blog/author/edgar">Edgar</a></li>-->
     </ul>
     <a class="subscribe-button icon-feed" href="/blog/feed.xml">Subscribe</a>
 </div>
@@ -84,13 +83,13 @@
 <script type="module">
     var list = ['🤍', '🧡', '💛', '💚', '💙', '💜', '🤎'];
     window.onload = changeIcon; 
-    function changeIcon(){
+    function changeIcon(){ 
         for(let i=0; i<document.getElementsByTagName('li').length; i++){
-            if(i==document.getElementsByTagName('li').length-1) document.getElementsByClassName('heart')[i].innerHTML = '<div>📌<div>'
+            if(i==document.getElementsByTagName('li').length-1) document.getElementsByClassName('heart')[i].innerHTML = '<div>🔐<div>'
             else document.getElementsByClassName('heart')[i].innerHTML = '<div>'+list[i]+'<div>'
 
             if(document.getElementsByTagName('li')[i].className == 'nav-author  nav-current'){
-                if(window.location.href.contain('http://127.0.0.1:4000/blog/')) return true;
+                if(window.location.href.includes('http://127.0.0.1:4000/blog/')) return true;
                  else { 
                     alert('접근할 수 없습니다. ');
                     return window.location.href='/blog/';
@@ -146,7 +145,7 @@
     </div>
 
     <!-- This is the post loop - each post will be output using this markup -->
-    
+            
     <article class="post">
         <header class="post-header">
             <h2 class="post-title"><a href="/blog/basic-1">[개념] 유의적 버전</a></h2>

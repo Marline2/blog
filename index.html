@@ -74,8 +74,7 @@
         <li class="nav-fables " role="presentation"><a href="/blog/tag/basic">Basic</a></li><div class="heart"></div>
         <li class="nav-author " role="presentation"><a href="/blog/tag/etc">Etc</a></li><div class="heart"></div>
         <li class="nav-author " role="presentation"><a href="/blog/tag/secret">Secret</a></li>
-        <!--<li class="nav-author " role="presentation"><a href="/blog/author/casper">Casper</a></li>
-        <li class="nav-author " role="presentation"><a href="/blog/author/edgar">Edgar</a></li>-->
+        <!--<li class="nav-author " role="presentation"><a href="/blog/author/edgar">Edgar</a></li>-->
     </ul>
     <a class="subscribe-button icon-feed" href="/blog/feed.xml">Subscribe</a>
 </div>
@@ -84,13 +83,13 @@
 <script type="module">
     var list = ['🤍', '🧡', '💛', '💚', '💙', '💜', '🤎'];
     window.onload = changeIcon; 
-    function changeIcon(){
+    function changeIcon(){ 
         for(let i=0; i<document.getElementsByTagName('li').length; i++){
-            if(i==document.getElementsByTagName('li').length-1) document.getElementsByClassName('heart')[i].innerHTML = '<div>📌<div>'
+            if(i==document.getElementsByTagName('li').length-1) document.getElementsByClassName('heart')[i].innerHTML = '<div>🔐<div>'
             else document.getElementsByClassName('heart')[i].innerHTML = '<div>'+list[i]+'<div>'
 
             if(document.getElementsByTagName('li')[i].className == 'nav-author  nav-current'){
-                if(window.location.href.contain('http://127.0.0.1:4000/blog/')) return true;
+                if(window.location.href.includes('http://127.0.0.1:4000/blog/')) return true;
                  else { 
                     alert('접근할 수 없습니다. ');
                     return window.location.href='/blog/';
@@ -141,44 +140,13 @@
     </div>
 
     <!-- This is the post loop - each post will be output using this markup -->
-    
-    <article class="post">
-        <header class="post-header">
-            <h2 class="post-title"><a href="/blog/etc-test">[블로그 이전] 테스트</a></h2>
-        </header>
-        <section class="post-excerpt">
-            <p>기존 블로그에서 이 곳으로 옮기는 중입니다.. 23.10.08 medium@marlinelee2/ 안녕! This is just an ipsis verbis copy of the first example running on the Ghost Demo. This... <a class="read-more" href="/blog/etc-test">&raquo;</a></p>
-        </section>
-        <footer class="post-meta">
             
-                
-
-                <img class="author-thumb" src="/blog/assets/images/marlinesquare.jpg" alt="Author image" nopin="nopin" />
-                <!-- author -->
-                <a href='/blog/author/Marline2'>marline lee</a>
-
-                
-            
-
-            <!-- [[tags prefix=" on "]] -->
-            
-                on
-                
-                    
-                       <a href='/blog/tag/secret'>Secret</a>
-                    
-                
-            
-            <time class="post-date" datetime="2023-10-08">08 Oct 2023</time>
-        </footer>
-    </article>
-    
     <article class="post">
         <header class="post-header">
             <h2 class="post-title"><a href="/blog/etc-1">[jekyll/jasper] Git 블로그 만들기</a></h2>
         </header>
         <section class="post-excerpt">
-            <p>jekyllt/jasper 아래 절차를 밟고 블로그를 만들어요 ! 류비다운받고 폴더 다운받아서 붙이고 bundle install 하기 전에 뭐. 또 햇엇음.. 그리고 remote하고 branch만들고 git rm 하거나 없앴다룽 주저리주저리..... <a class="read-more" href="/blog/etc-1">&raquo;</a></p>
+            <p>해당 게시글이 알려줄 블로그 테마는 ✨jekyllt/jasper 입니다. 🛠순서 Ruby를 다운로드 합니다. 테마 파일을 다운로드 받아 기본 구조를 만듭니다. Git Hub와 연동합니다. Branch 1과 연동합니다. Branch 2와... <a class="read-more" href="/blog/etc-1">&raquo;</a></p>
         </section>
         <footer class="post-meta">
             
@@ -196,14 +164,14 @@
                 on
                 
                     
-                       <a href='/blog/tag/secret'>Secret</a>
+                       <a href='/blog/tag/etc'>Etc</a>
                     
                 
             
-            <time class="post-date" datetime="2023-10-08">08 Oct 2023</time>
+            <time class="post-date" datetime="2023-10-10">10 Oct 2023</time>
         </footer>
     </article>
-    
+            
     <article class="post">
         <header class="post-header">
             <h2 class="post-title"><a href="/blog/basic-1">[개념] 유의적 버전</a></h2>
@@ -232,6 +200,37 @@
                 
             
             <time class="post-date" datetime="2023-10-07">07 Oct 2023</time>
+        </footer>
+    </article>
+            
+    <article class="post">
+        <header class="post-header">
+            <h2 class="post-title"><a href="/blog/etc-test">[블로그 이전] 테스트🔐</a></h2>
+        </header>
+        <section class="post-excerpt">
+            <p>기존 블로그에서 이 곳으로 옮기는 중입니다.. 23.10.08 medium@marlinelee2/ sample.............................................................................................................................................. This is just an ipsis verbis copy of the first example running on the Ghost Demo. This... <a class="read-more" href="/blog/etc-test">&raquo;</a></p>
+        </section>
+        <footer class="post-meta">
+            
+                
+
+                <img class="author-thumb" src="/blog/assets/images/marlinesquare.jpg" alt="Author image" nopin="nopin" />
+                <!-- author -->
+                <a href='/blog/author/Marline2'>marline lee</a>
+
+                
+            
+
+            <!-- [[tags prefix=" on "]] -->
+            
+                on
+                
+                    
+                       <a href='/blog/tag/secret'>Secret</a>
+                    
+                
+            
+            <time class="post-date" datetime="1990-01-01">01 Jan 1990</time>
         </footer>
     </article>
     

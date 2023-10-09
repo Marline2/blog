@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- Page Meta -->
-    <title>[블로그 이전] 테스트</title>
+    <title>[블로그 이전] 테스트🔐</title>
     <meta name="description" content="복습하쟈" />
 
     <!-- Mobile Meta -->
@@ -31,25 +31,25 @@
 
     <meta property="og:site_name" content="말린이의 복습공간" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="[블로그 이전] 테스트" />
+    <meta property="og:title" content="[블로그 이전] 테스트🔐" />
     <meta property="og:description" content="복습하쟈" />
     <meta property="og:url" content="http://localhost:4000/blog//etc-test" />
-    <meta property="og:image" content="/blog/assets/images/cover3.jpg" />
+    <meta property="og:image" content="/blog/assets/images/cover1.jpg" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="[블로그 이전] 테스트" />
+    <meta name="twitter:title" content="[블로그 이전] 테스트🔐" />
     <meta name="twitter:description" content="복습하쟈" />
     <meta name="twitter:url" content="http://localhost:4000/blog//etc-test" />
-    <meta name="twitter:image:src" content="/blog/assets/images/cover3.jpg" />
+    <meta name="twitter:image:src" content="/blog/assets/images/cover1.jpg" />
 
     <script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "Website",
     "publisher": "말린이의 복습공간",
-    "name": "[블로그 이전] 테스트",
+    "name": "[블로그 이전] 테스트🔐",
     "url": "http://localhost:4000/blog//etc-test",
-    "image": "/blog/assets/images/cover3.jpg",
+    "image": "/blog/assets/images/cover1.jpg",
     "description": "복습하쟈"
 }
     </script>
@@ -74,8 +74,7 @@
         <li class="nav-fables " role="presentation"><a href="/blog/tag/basic">Basic</a></li><div class="heart"></div>
         <li class="nav-author  nav-current" role="presentation"><a href="/blog/tag/etc">Etc</a></li><div class="heart"></div>
         <li class="nav-author " role="presentation"><a href="/blog/tag/secret">Secret</a></li>
-        <!--<li class="nav-author " role="presentation"><a href="/blog/author/casper">Casper</a></li>
-        <li class="nav-author " role="presentation"><a href="/blog/author/edgar">Edgar</a></li>-->
+        <!--<li class="nav-author " role="presentation"><a href="/blog/author/edgar">Edgar</a></li>-->
     </ul>
     <a class="subscribe-button icon-feed" href="/blog/feed.xml">Subscribe</a>
 </div>
@@ -84,13 +83,13 @@
 <script type="module">
     var list = ['🤍', '🧡', '💛', '💚', '💙', '💜', '🤎'];
     window.onload = changeIcon; 
-    function changeIcon(){
+    function changeIcon(){ 
         for(let i=0; i<document.getElementsByTagName('li').length; i++){
-            if(i==document.getElementsByTagName('li').length-1) document.getElementsByClassName('heart')[i].innerHTML = '<div>📌<div>'
+            if(i==document.getElementsByTagName('li').length-1) document.getElementsByClassName('heart')[i].innerHTML = '<div>🔐<div>'
             else document.getElementsByClassName('heart')[i].innerHTML = '<div>'+list[i]+'<div>'
 
             if(document.getElementsByTagName('li')[i].className == 'nav-author  nav-current'){
-                if(window.location.href.contain('http://127.0.0.1:4000/blog/')) return true;
+                if(window.location.href.includes('http://127.0.0.1:4000/blog/')) return true;
                  else { 
                     alert('접근할 수 없습니다. ');
                     return window.location.href='/blog/';
@@ -112,7 +111,7 @@
 <!-- Everything inside the #post tags pulls data from the post -->
 <!-- #post -->
 
-<header class="main-header post-head " style="background-image: url(/blog/assets/images/cover3.jpg) ">
+<header class="main-header post-head " style="background-image: url(/blog/assets/images/cover1.jpg) ">
     <nav class="main-nav  overlay  clearfix">
         <a class="blog-logo" href="/blog/"><img src="/blog/assets/images/ghost.png" alt="Blog Logo" /></a>
         
@@ -126,7 +125,7 @@
     <article class="post tag-test tag-content">
 
         <header class="post-header">
-            <h1 class="post-title">[블로그 이전] 테스트</h1>
+            <h1 class="post-title">[블로그 이전] 테스트🔐</h1>
             <section class="post-meta">
             <!-- <a href='/blog/'></a> -->
 
@@ -135,7 +134,7 @@
                     <a href='/blog/author/Marline2'>marline lee</a>
                 
             
-            <time class="post-date" datetime="2023-10-08">08 Oct 2023</time>
+            <time class="post-date" datetime="1990-01-01">01 Jan 1990</time>
                 <!-- [[tags prefix=" on "]] -->
                 
                 on
@@ -155,7 +154,17 @@
 
 <hr />
 
-<p>안녕!</p>
+<p>sample..............................................................................................................................................
+</p>
+<hr />
+
+
+
+
+
+
+
+
 
 <p>This is just an <em>ipsis verbis</em> copy of the first example running on the <a href="http://demo.ghost.io">Ghost Demo</a>. This shows how you can use html styling to achieve your hopes.</p>
 
@@ -574,24 +583,25 @@ c.draw = function() {
         <footer class="post-footer">
 
             <!-- Everything inside the #author tags pulls data from the author -->
+            <!--a href="/blog/author/Marline2"-->
             <!-- #author-->
             
                 
                     
                         <figure class="author-image">
-                            <a class="img" href="/blog/author/Marline2" style="background-image: url(/blog/assets/images/marlinesquare.jpg)"><span class="hidden">Marline2's Picture</span></a>
+                            <a class="img" href="/blog/about" style="background-image: url(/blog/assets/images/marlinesquare.jpg)"><span class="hidden">Marline2's Picture</span></a>
                         </figure>
                     
 
                     <section class="author">
-                        <h4><a href="/blog/author/Marline2">marline lee</a></h4>
+                        <h4><a href="/blog/about">marline lee</a></h4>
 
                         
                             <p> 웹 개발자</p>
                         
                         <div class="author-meta">
                             <span class="author-location icon-location"> Seoul, Republic of Korea</span>
-                            <span class="author-link icon-link"><a href="http://Marline2.github.io/blog/"> Marline2.github.io/blog</a></span>
+                            <span class="author-link icon-link"><a href="https://github.com/Marline2"> github.com/Marline2</a></span>
                         </div>
                     </section>
 
@@ -599,7 +609,7 @@ c.draw = function() {
 
                     <section class="share">
                         <h4>Share this post</h4>
-                        <a class="icon-twitter" href="http://twitter.com/share?text=[블로그 이전] 테스트&amp;url=http://localhost:4000etc-test"
+                        <a class="icon-twitter" href="http://twitter.com/share?text=[블로그 이전] 테스트🔐&amp;url=http://localhost:4000etc-test"
                             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                             <span class="hidden">Twitter</span>
                         </a>
@@ -628,15 +638,15 @@ c.draw = function() {
 
     <!-- [[! next_post ]] -->
     
-    <!-- [[! /next_post ]] -->
-    <!-- [[! prev_post ]] -->
-    
-        <a class="read-next-story prev " style="background-image: url(/blog/assets/images/cover3.jpg)" href="/blog/etc-1">
+        <a class="read-next-story " style="background-image: url(/blog/assets/images/cover2.jpg)" href="/blog/basic-1">
             <section class="post">
-                <h2>[jekyll/jasper] Git 블로그 만들기</h2>
-                <p>jekyllt/jasper 아래 절차를 밟고 블로그를 만들어요 ! 류비다운받고 폴더 다운받아서 붙이고 bundle install 하기 전에...</p>
+                <h2>[개념] 유의적 버전</h2>
+                <p>## 🎈 Major.Minor.Patch - **특정 시점의 상태에 대해 식별 가능한 유일한 이름을 지정하는 것** `ex)...</p>
             </section>
         </a>
+    
+    <!-- [[! /next_post ]] -->
+    <!-- [[! prev_post ]] -->
     
     <!-- [[! /prev_post ]] -->
 </aside>
