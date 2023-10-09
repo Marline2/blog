@@ -8,7 +8,8 @@
         <li class="nav-home {% if page.current == 'home' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}">Home</a></li><div class="heart"></div>
         <li class="nav-about {% if page.current == 'about' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}about">About</a></li><div class="heart"></div>
         <li class="nav-fables {% if page.url contains 'basic' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/basic">Basic</a></li><div class="heart"></div>
-        <li class="nav-author {% if page.url contains 'etc' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/etc">Etc</a></li>
+        <li class="nav-author {% if page.url contains 'etc' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/etc">Etc</a></li><div class="heart"></div>
+        <li class="nav-author {% if page.url contains 'secret' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/secret">Secret</a></li>
         <!--<li class="nav-author {% if page.url contains 'casper' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}author/casper">Casper</a></li>
         <li class="nav-author {% if page.url contains 'edgar' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}author/edgar">Edgar</a></li>-->
     </ul>
@@ -16,11 +17,21 @@
 </div>
 <span class="nav-cover"></span>
 
-<script>
+<script type="module">
     var list = ['🤍', '🧡', '💛', '💚', '💙', '💜', '🤎'];
-    window.onload = changeIcon;
+    window.onload = changeIcon; 
     function changeIcon(){
-        for(let i=0; i<document.getElementsByTagName('li').length; i++)
-            document.getElementsByClassName('heart')[i].innerHTML = '<div>'+list[i]+'<div>'
+        for(let i=0; i<document.getElementsByTagName('li').length; i++){
+            if(i==document.getElementsByTagName('li').length-1) document.getElementsByClassName('heart')[i].innerHTML = '<div>📌<div>'
+            else document.getElementsByClassName('heart')[i].innerHTML = '<div>'+list[i]+'<div>'
+
+            if(document.getElementsByTagName('li')[i].className == 'nav-author  nav-current'){
+                if(window.location.href.contain('http://127.0.0.1:4000/blog/')) return true;
+                 else { 
+                    alert('접근할 수 없습니다. ');
+                    return window.location.href='{{ site.baseurl }}';
+                }
+            }
+        }
     }
 </script>
