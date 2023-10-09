@@ -5,11 +5,11 @@
     </a>
     <ul>
         <div class="heart"></div>
-        <li class="nav-home {% if page.current == 'home' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}">Home</a></li><div class="heart"></div>
-        <li class="nav-about {% if page.current == 'about' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}about">About</a></li><div class="heart"></div>
-        <li class="nav-fables {% if page.url contains 'basic' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/basic">Basic</a></li><div class="heart"></div>
-        <li class="nav-speeches {% if page.url contains 'etc' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/etc">Etc</a></li><div class="heart"></div>
-        <li class="nav-author {% if page.url contains 'secret' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/secret">Secret</a></li>
+        <li class="nav-home {% if page.current == 'home' %} nav-current{% endif %}" role="presentation"><a name="menu_" href="{{ site.baseurl }}">Home</a></li><div class="heart"></div>
+        <li class="nav-about {% if page.current == 'about' %} nav-current{% endif %}" role="presentation"><a name="menu_" href="{{ site.baseurl }}about">About</a></li><div class="heart"></div>
+        <li class="nav-fables {% if page.url contains 'basic' %} nav-current{% endif %}" role="presentation"><a name="menu_" href="{{ site.baseurl }}tag/basic">Basic</a></li><div class="heart"></div>
+        <li class="nav-speeches {% if page.url contains 'etc' %} nav-current{% endif %}" role="presentation"><a name="menu_" href="{{ site.baseurl }}tag/etc">Etc</a></li><div class="heart"></div>
+        <li name="secret_" class="nav-author {% if page.url contains 'secret' %} nav-current{% endif %}" role="presentation"><a name="menu_" href="{{ site.baseurl }}tag/secret">Secret</a></li>
         <!--<li class="nav-author {% if page.url contains 'edgar' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}author/edgar">Edgar</a></li>-->
     </ul>
     <a class="subscribe-button icon-feed" href="{{ site.baseurl }}feed.xml">Subscribe</a>
@@ -19,15 +19,13 @@
 <script type="module">
     var list = ['🤍', '🧡', '💛', '💚', '💙', '💜', '🤎'];
     window.onload = changeIcon; 
-    function changeIcon(){ 
-        console.log(document.getElementsByTagName('li').length);
-        for(let i=0; i<document.getElementsByTagName('li').length; i++){
-            if(i == 5) return; 
-            if(document.getElementsByTagName('li')[i].className.includes('nav-author')) document.getElementsByClassName('heart')[i].innerHTML = '<div>🔐<div>'
+    function changeIcon(){
+        for(let i=0; i<document.getElementsByName('menu_').length; i++){
+            if(document.getElementsByName('menu_')[i].text == 'Secret') document.getElementsByClassName('heart')[i].innerHTML = '<div>🔐<div>'
             else document.getElementsByClassName('heart')[i].innerHTML = '<div>'+list[i]+'<div>'
-            if(document.getElementsByTagName('li')[i].className == 'nav-author  nav-current'){
-                if(window.location.href.includes('http://127.0.0.1:4000/blog/')) return true;
-                 else { 
+            if(document.getElementsByName('secret_')[0].className == 'nav-author  nav-current'){
+                if(window.location.href.includes('http://127.0.0.1:4000/')) return true;
+                else { 
                     alert('접근할 수 없습니다. ');
                     return window.location.href='{{ site.baseurl }}';
                 }
