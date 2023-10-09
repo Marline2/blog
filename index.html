@@ -72,7 +72,7 @@
         <li class="nav-home  nav-current" role="presentation"><a href="/blog/">Home</a></li><div class="heart"></div>
         <li class="nav-about " role="presentation"><a href="/blog/about">About</a></li><div class="heart"></div>
         <li class="nav-fables " role="presentation"><a href="/blog/tag/basic">Basic</a></li><div class="heart"></div>
-        <li class="nav-author " role="presentation"><a href="/blog/tag/etc">Etc</a></li><div class="heart"></div>
+        <li class="nav-speeches " role="presentation"><a href="/blog/tag/etc">Etc</a></li><div class="heart"></div>
         <li class="nav-author " role="presentation"><a href="/blog/tag/secret">Secret</a></li>
         <!--<li class="nav-author " role="presentation"><a href="/blog/author/edgar">Edgar</a></li>-->
     </ul>
@@ -84,10 +84,11 @@
     var list = ['🤍', '🧡', '💛', '💚', '💙', '💜', '🤎'];
     window.onload = changeIcon; 
     function changeIcon(){ 
+        console.log(document.getElementsByTagName('li').length);
         for(let i=0; i<document.getElementsByTagName('li').length; i++){
-            if(i==document.getElementsByTagName('li').length-1) document.getElementsByClassName('heart')[i].innerHTML = '<div>🔐<div>'
+            if(i == 5) return; 
+            if(document.getElementsByTagName('li')[i].className.includes('nav-author')) document.getElementsByClassName('heart')[i].innerHTML = '<div>🔐<div>'
             else document.getElementsByClassName('heart')[i].innerHTML = '<div>'+list[i]+'<div>'
-
             if(document.getElementsByTagName('li')[i].className == 'nav-author  nav-current'){
                 if(window.location.href.includes('http://127.0.0.1:4000/blog/')) return true;
                  else { 
